@@ -11,7 +11,7 @@
 
 <!-- https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=90.0&lon=1.3 -->
 <p>This is the case for Glint Solar.</p> 
-<p>Author: Miguel Chapela Rivas</p>
+<p>Author: Miguel Chapela</p>
   
 <p><form action="PayslipServlet" method="get">
           Latitude:    <input type="text" name="lat" id="lat"><br/>
@@ -23,7 +23,7 @@
 </p>
 <script>
   function maxw() {
-     document.getElementById("result").innerHTML = "https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=" + document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value;
+     document.getElementById("result").innerHTML = fetch("https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=" + document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value);
           }
 </script> 
 
