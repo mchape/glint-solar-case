@@ -27,8 +27,8 @@
   .then(data => {
 
    for(let prop in data){
-    document.querySelector("#result").innerText  += prop + " " + data[prop] + "\n"
-    }
+    document.querySelector("#result").innerText  +=  "In the year " + prop + "  the maximum wave height was " + data[prop] + " meters" + "\n"
+   }
 })  
   }
 </script> 
