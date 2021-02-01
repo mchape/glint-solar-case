@@ -24,7 +24,11 @@
 <script>
   function maxw() {
      document.getElementById("result").innerHTML = fetch("https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=" + document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value)
-          .then(res => res.json()) 
+        .then(response => {
+        response.json().then(json => {
+           return response
+        })
+    })
   }
 </script> 
 
