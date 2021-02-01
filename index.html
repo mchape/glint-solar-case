@@ -23,10 +23,14 @@
 <h1> Max wave height</h1>
 <script>
   function maxw() {
-     const h1 = document.querySelector('body h1');
      fetch("https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=" + document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value)
-          .then(res => res.json())
-          .then(data => {h1.innerHTML = data[0];
+          .then((response) => {
+          return response.text();
+                 })
+    .then((myContent) => {
+      document.querySelector('.par').innerHTML = myContent;
+      document.querySelector('.par').classList.add('box');
+    });
   }
 </script> 
 
