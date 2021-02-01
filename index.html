@@ -13,16 +13,17 @@
 <p>This is the case for Glint Solar.</p> 
 <p>Author: Miguel Chapela Rivas</p>
   
-<form action="PayslipServlet" method="get">
+<p><form action="PayslipServlet" method="get">
           Latitude:    <input type="text" name="lat" id="lat"><br/>
           Longitude:   <input type="text" name="lon" id="lon"><br/>
+          Max wave height: <span id="result"></span>
           <br>
           <input type="button" value="Submit" onClick="pr()">
 </form>
-
+</p>
 <script>
   function pr() {
-     document.getElementById('lat').value + " " + document.getElementById('lon').value;
+     document.getElementById("result").innerHTML = document.getElementById('lat').value + " " + document.getElementById('lon').value;
           }
 </script> 
 
