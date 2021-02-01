@@ -18,12 +18,12 @@
           Longitude:   <input type="text" name="lon" id="lon"><br/>
           Max wave height: <span id="result"></span>
           <br>
-          <input type="button" value="Submit" onClick="pr()">
+          <input type="button" value="Submit" onClick="maxw()">
 </form>
 </p>
 <script>
-  function pr() {
-     document.getElementById("result").innerHTML = document.getElementById('lat').value + " " + document.getElementById('lon').value;
+  function maxw() {
+     document.getElementById("result").innerHTML = "https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat="document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value;
           }
 </script> 
 
