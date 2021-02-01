@@ -16,7 +16,7 @@
 <p><form action="PayslipServlet" method="get">
           Latitude:    <input type="text" name="lat" id="lat"><br/>
           Longitude:   <input type="text" name="lon" id="lon"><br/>
-          Name: <span id="result"></span>
+          Max Wave height: <span id="result"></span>
           <br>
           <input type="button" value="Submit" onClick="maxw()">
 </form>
@@ -24,9 +24,10 @@
 <script>
   function maxw() {
      document.getElementById("result").innerHTML = fetch("https://europe-west1-freesolarcalc.cloudfunctions.net/wave_max/?lat=" + document.getElementById('lat').value + "&lon=" + document.getElementById('lon').value)
-          .then((response) => {
-          return response.text();
-                 })
+          .then(function(response) {
+           return response.text();
+            })
+
   }
 </script> 
 
